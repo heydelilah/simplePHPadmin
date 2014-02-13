@@ -1,0 +1,98 @@
+{include header}
+<!-- Begin of Content -->
+<div class="container_wrap">
+	<div class="content">
+		<!-- 在线申请 -->
+		<div class="apply">
+			<h3>在线申请</h3>
+			<p class="formInfo">欢迎在线申请产品服务，请填写以下信息，提交申请后，我们会在最短的时间内联系您！</p>
+			<form method="post" action="apply.php" id="apply_form" >
+				<div class="form">
+					<div class="fl">
+						<div class="item">
+							<label for="company">公司名称<i>*</i>：</label>
+							<input id="company" type="text" name="company"/>
+						</div>
+						<div class="item">
+							<label for="mobile">手机<i>*</i>：</label>
+							<input id="mobile" type="text" name="mobile"/>
+						</div>
+						<div class="item">
+							<label for="email">电子邮件：</label>
+							<input id="email" type="text" name="email"/>
+						</div>
+						<div class="item">
+							<label for="address">公司所在地：</label>
+							<input id="address" class="hasHolder addr" type="text" name="address"/>
+						</div>
+					</div>
+					<div class="fl">
+						<div class="item">
+							<label for="contact">联系人<i>*</i>：</label>
+							<input id="contact" type="text" name="contact"/>
+						</div>
+						<div class="item">
+							<label for="phone">座机：</label>
+							<input id="phone" class="hasHolder phone" type="text" name="phone"/>
+						</div>
+						<div class="item">
+							<label for="site">公司网址：</label>
+							<input id="site" type="text" name="site"/>
+						</div>
+					</div>
+				</div>
+				<div class="save">
+					<input type="submit" value="" />
+					<div class="tel">
+						随时拨打全国咨询热线：<span>{telephone}</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script>
+			// 输入框placeholder
+			$(function() {
+				$('.apply .form .hasHolder')
+					.focus(function(){
+						$(this).addClass('noPlaceholder');
+					})
+					.blur(function(){
+						if($(this).val()=== ""){
+							$(this).removeClass('noPlaceholder');
+						}
+					});
+
+				$('#apply_form').submit(function(){
+					var data = {
+						company: $.trim($('#company').val()),
+						contact: $.trim($('#contact').val()),
+						mobile: $.trim($('#mobile').val()),
+						phone: $.trim($('#phone').val()),
+						email: $.trim($('#email').val()),
+						address: $.trim($('#address').val()),
+						site: $.trim($('#site').val())
+					};
+
+					if (data.company === ''){
+						alert('请输入公司名称');
+						$('#company').focus();
+						return false;
+					}
+					if (data.contact === ''){
+						alert('请输入联系人');
+						$('#contact').focus();
+						return false;
+					}
+					if (data.mobile === '' || !(/^1\d{10,}$/.test(data.mobile))){
+						alert('请输入11位有效的手机号码');
+						$('#mobile').focus();
+						return false;
+					}
+					return true;
+				});
+			});
+		</script>
+	</div>
+</div>
+<!-- End of the Content -->
+{include footer}

@@ -1,0 +1,304 @@
+body{
+	font-family: Georgia;
+	margin: 0;
+	background-color: #292929;
+	}
+
+/*头部*/
+.header{
+	background-color: #fff;
+}
+.header .logo{
+	width: 960px;
+	margin: 0 auto;
+	padding: 18px 0 18px 0;
+}
+.header .title{
+	font-family: microsoft YaHei;
+	font-size: 24PX;
+	margin: 0;
+}
+.header .nav{
+	background-color: #292929;
+	/*background-color: #fff;*/
+}
+.header .nav ul{
+	width: 1000px;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+	overflow: hidden;
+}
+.header .nav ul li{
+	float: left;
+}
+.header .nav ul li a{
+	color: #fff;
+	/*color: #000;*/
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 13px 22px 9px 15px;
+	border-bottom: solid 4px #292929;
+}
+.header .nav ul .logout a{
+	color: #fff;
+	/*color: #000;*/
+	float: right;
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 13px 22px 9px 15px;
+	border-bottom: solid 4px #292929;
+}
+.header .nav ul .logout a:hover{
+	color: red;
+}
+.header .nav ul li a:hover{
+	color: red;
+}
+.header .nav ul li a.act{
+	color:#fff;
+	/*color: #000;*/
+	cursor: default;
+	border-bottom: solid 4px red;
+}
+
+/*内容区*/
+.container_wrap {
+    background-color: #fff;
+}
+.content {
+    background-color: #fff;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    min-height: 600px;
+    height: auto !important;
+    height: 600px;
+}
+
+/*表单*/
+.form{
+	margin-top: 1em;
+}
+.form form li {
+	list-style-type: none;
+	margin-bottom: 1em;
+}
+.form label{
+	display:block;
+	/*margin-top: 1em;*/
+	/*width: 84px;*/
+	/*text-align: right;*/
+	/*float: left;*/
+	font-size: 14px;
+	color: #5e5c5d;
+	margin-bottom: 5px;
+}
+.form input[type="text"]{
+	width: 300px;
+	padding: 2px;
+	border: solid 1px #b2b2b2;
+}
+.form input[type="password"]{
+	width: 300px;
+	padding: 2px;
+	border: solid 1px #b2b2b2;
+}
+.form textarea{
+	width: 300px;
+	height: 300px;
+	padding: 2px;
+	border: solid 1px #b2b2b2;
+}
+.save{
+	width: 134px;
+	height: 40px;
+	background-color: #eb3e46;
+	box-shadow: 0 2px 3px #888;
+	border-radius: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+	border: none;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	/*color:#000;*/
+	font-size: 18px;
+}
+
+/*登录页*/
+.login{
+	background-color: #fff;
+	margin: 5% auto;
+	width: 300px;
+	border-radius: 5px;
+	font-family: microsoft YaHei;
+	padding: 40px;
+}
+.login h1{
+	margin: 0 0 20px 0;
+}
+.login form li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+.login label{
+	/*display:block;*/
+	margin-top: 1em;
+
+}
+.login input[type="text"]{
+	width: 200px;
+	height: 20px;
+	padding: 2px;
+	border: solid 1px #b2b2b2;
+}
+.login input[type="password"]{
+	width: 200px;
+	height: 20px;
+	padding: 2px;
+	border: solid 1px #b2b2b2;
+}
+.login textarea{
+	width: 300px;
+	height: 300px;
+}
+.tips{
+	color: #eb3e46;
+	/*width: 300px;*/
+	margin: 5% auto 0;
+
+}
+
+/*上传页面下拉框*/
+.dropdown{
+	vertical-align: middle;
+	display: inline-block;
+}
+.pagename{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/*表格样式*/
+/*------------------------------------------------------------
+This resource has been created by Devin Price of WPTheming.com
+http://wptheming.com/2011/01/simple-table-css3/
+------------------------------------------------------------*/
+.table{
+	width: 960px;
+	overflow-x:scroll;
+}
+table {
+	/*overflow:scroll;*/
+	border:1px solid #d3d3d3;
+	background:#fefefe;
+	width: 960px;
+	margin:5% auto 0;
+	-moz-border-radius:5px; /* FF1+ */
+	-webkit-border-radius:5px; /* Saf3-4 */
+	border-radius:5px;
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+th{ padding:18px 0px 18px;text-align:center;}
+
+td {padding:18px 20px 18px; text-align:center; }
+
+th {padding-top:22px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
+
+td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+
+tr.odd-row td {background:#f6f6f6;}
+
+td.first, th.first {text-align:left}
+
+td.last {border-right:none;}
+
+td {
+	background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f9f9f9), to(#fefefe));
+}
+
+tr.odd-row td {
+	background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f1f1f1), to(#f6f6f6));
+}
+
+th {
+	background: -moz-linear-gradient(100% 20% 90deg, #e8eaeb, #ededed);
+	background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#e8eaeb));
+}
+
+tr:first-child th.first {
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px; /* Saf3-4 */
+}
+
+tr:first-child th.last {
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px; /* Saf3-4 */
+}
+
+tr:last-child td.first {
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px; /* Saf3-4 */
+}
+
+tr:last-child td.last {
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px; /* Saf3-4 */
+}
+/*------------------------------------------------------------
+end
+------------------------------------------------------------*/
+
+.pager{
+	float: right;
+	margin-top: 15px;
+}
+.pager .total{
+	margin-left: 20px;
+}
+.pager a{
+	margin-right: 10px;
+}
+.pager span.act{
+	margin-right: 10px;
+	color: #eb3e46;
+	cursor: default;
+}
+.pager a:hover{
+	color: #eb3e46;
+}
+/*底部*/
+.footer {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #aaa;
+    text-align: center;
+	background: #292929;
+	font-size: 12px;
+}
+.footer a {
+    color: #aaa;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+.footer .copyright{
+    height: 40px;
+    width: 960px;
+    margin: 0 auto;
+    background: #292929;
+}
+.footer .copyright p {
+    margin: 0;
+    line-height: 40px;
+    display: inline-block;
+}

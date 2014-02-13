@@ -1,0 +1,32 @@
+{include header}
+<div class="container_wrap">
+<div class="content">
+	<div class="form">
+		<form action="update_info.php" method="post"
+		enctype="multipart/form-data">
+			<li>
+				<label for="file">网站Logo：</label>
+				<img src="{logo}" alt="">
+				<div><input type="file" name="file" id="file"></div>
+			</li>
+			<li>
+				<label for="telephone">联系电话：</label>
+				<input type="text" name="telephone" value="{telephone}">
+			</li>
+			<li>
+				<label for="footer_left">尾部信息-左：</label>
+				<input type="text" name="footer_left" value="{footer_left}">
+			</li>
+			<li>
+				<label for="footer_right">尾部信息-右：</label>
+				<input type="text" name="footer_right" value="{footer_right}">
+			</li>
+			<li>
+				<input type="submit" value="保存" class="save">
+			</li>
+		</form>
+	</div>
+	<p class="tips">{tips}</p>
+</div>
+</div>
+{include footer}

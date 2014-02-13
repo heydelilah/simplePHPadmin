@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+
+	<div class="login">
+		<h1>登录</h1>
+		<form action="login.php" method="post" enctype="multipart/form-data">
+			<li>
+				<label for="email">邮箱：</label>
+				<input type="text" name="email">
+			</li>
+			<li>
+				<label for="password">密码：</label>
+				<input type="password" name="password">
+			</li>
+			<li>
+				<input type="submit" value="确认登录" class="save">
+			</li>
+		</form>
+
+		<p class="tips">{tips}</p>
+	</div>
+
+</body>
+</html>

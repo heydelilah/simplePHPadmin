@@ -1,0 +1,103 @@
+.carouselBackground {
+    background-color: #F0F0F0;
+    -moz-box-shadow:0 -2px 3px #999 inset;
+    -webkit-box-shadow:0 -2px 3px #999 inset;
+    box-shadow:0 -2px 3px #999 inset;
+    height: 303px;
+}
+.carouselBox {
+    height: 298px;
+    margin: 0 auto;
+    position: relative;
+}
+.carouselBox .row {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carouselImg {
+    top: 0;
+    left: 0;
+    height: 298px;
+    min-width: 100%;
+    position: absolute;
+}
+.callUs {
+    padding-top: 20px;
+    opacity: 0.9;
+    filter:alpha(opacity=90);
+}
+.callUs span {
+    display: block;
+}
+.callUs div {
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #888888;
+    text-align: center;
+}
+.callUs .desc {
+    color: #bbb;
+    padding-top: 30px;
+}
+.callUs .phone {
+    color: #ec3e47;
+    font-size: 32px;
+    padding: 27px 0;
+    border-bottom: 2px lightgray solid;
+    width: 94%;
+    margin: 0 auto;
+}
+.callUs .apply {
+    background-image: url(img/apply2.png);
+    display: block;
+    width: 200px;
+    height: 43px;
+    margin: 17 auto;
+}
+.titles {
+    text-align: center;
+    height: 300px;
+}
+.titles .carousel {
+    margin: 0 auto;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.titles .carousel div{
+    height: 150px;
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 75px;
+}
+.titles .carousel div h1{
+    margin-bottom: 20px;
+}
+.titles .carousel div.act, .titles .carousel div.next{
+    display: block;
+    left: 0;
+}
+.titles .buttons {
+    height: 50px;
+    margin: 0 auto;
+}
+.titles .buttons span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #444444;
+    margin-right: 9px;
+}
+.titles .buttons span:hover {
+    cursor: pointer;
+}
+.titles .buttons span.act {
+    background-color: #ec3e47;
+}

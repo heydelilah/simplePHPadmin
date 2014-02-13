@@ -1,0 +1,64 @@
+{include header}
+<script charset="utf-8" src="kindeditor-4.1.10/kindeditor-min.js"></script>
+<script charset="utf-8" src="kindeditor-4.1.10/lang/zh_CN.js"></script>
+<script>
+	// 编辑器
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="contents"]', {
+			allowFileManager : false,
+			uploadJson : 'upload_json.php',
+			items: [
+				'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+				'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+				'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+				'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+				'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+				'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+				'table', 'hr', 'emoticons', 'pagebreak',
+				'anchor', 'link', 'unlink', '|', 'about'
+			]
+		});
+	});
+</script>
+<div class="container_wrap">
+<div class="content">
+<div class="form">
+	<form action="update_pages.php" method="post"
+	enctype="multipart/form-data">
+		<li>
+			<label for="page_name">选择页面：</label>
+			<select name="page_name" class="dropdown">
+				<option value ="product">产品介绍页</option>
+				<option value ="contact">联系方式页</option>
+			</select>
+
+		</li>
+		<li>
+			<label for="contents">页面内容：</label>
+			<textarea name="contents" style="width:1000px;height:400px;visibility:hidden;">
+				{contents}
+			</textarea>
+		</li>
+		<li>
+			<input type="submit" value="保存" class="save">
+		</li>
+	</form>
+</div>
+<p class="tips">{tips}</p>
+</div>
+</div>
+<script charset="utf-8" src="../js/jquery-1.8.3.min.js"></script>
+<script>
+
+	$('.dropdown').val('{page}').change(function(ev){
+		var key = $(ev.target).val();
+		var path = window.location.href;
+		path = path.replace(/\?page=(\w*)/,'');
+		path =path+ '?page='+key;
+		window.location.href = path;
+	});
+
+</script>
+
+{include footer}

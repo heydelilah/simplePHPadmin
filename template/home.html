@@ -1,0 +1,113 @@
+<!-- 头部 -->
+{include header}
+
+<!-- ------- 旋转木马 + 欢迎拨打 ------- -->
+<div class="carouselBackground">
+<div class="container carouselBox">
+<img src="styles/img/banner-back.jpg" class="carouselImg" >
+<div class="row">
+  <div class="titles span8">
+    <div class="carousel">
+    <div class="act">
+      <h1>最专业的DSP	</h1>
+      <h1>为广告主提供最专业的产品和服务</h1>
+    </div>
+    <div>
+      <h1>大量优质广告媒体资源</h1>
+      <h1>每天超过50亿曝光</h1>
+    </div>
+    <div>
+      <h1>广告精准投放		</h1>
+      <h1>10亿级受众数据库，覆盖90%以上网民</h1>
+    </div>
+    <div>
+      <h1>专业数据监测和分析</h1>
+      <h1>全实时监测，全维度，全关联</h1>
+    </div>
+    </div>
+    <div class="buttons"></div>
+  </div>
+    <div class="callUs span4">
+      <div>
+          <span class="desc">欢迎拨打全国咨询热线：</span>
+          <span class="phone">{telephone}</span>
+          <span class="desc">或在线注册留下相关信息：</span>
+          <span><a class="apply" href="apply.php"></a></span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+<div stype="clear: both;"></div>
+<div class="container_wrap">
+
+  <div class="container mainArticle">
+    <div class="row despPart">
+      <div class="span4">
+        <h3>优质媒体资源</h3>
+        <p><img src="styles/img/mid-1.png" alt="">系统已经实现了与国内主要exchange平台的对接，拥有大量的优质媒体广告位，每天超过50亿竞价请求，覆盖全中国网民。</p>
+        <div><a href="product.php">查看详情</a></div>
+      </div>
+      <div class="span4">
+        <h3>广告精准投放</h3>
+        <p><img src="styles/img/mid-2.png" alt="">系统的广告受众分类与重定向功能，可实现广告对特定受众的精准投放。再配合创意曝光的频次控制算法、创意投放策略的控制设定，可以优化广告对指定受众的到达率。</p>
+        <div><a href="product.php">查看详情</a></div>
+      </div>
+      <div class="span4">
+        <h3>专业数据监测和报表</h3>
+        <p><img src="styles/img/mid-3.png" alt="">系统集成了专业的广告监测系统，多维数据任意关联，多达50个广告监测指标，并且可自定义扩展。统计数据全实时，最大程度满足广告分析和优化的需要。</p>
+        <div><a href="product.php">查看详情</a></div>
+      </div>
+    </div>
+    <div class="row sourcePart">
+     <div class="span12">
+          <h2>合作媒体资源</h2>
+            <div class="listBox">
+              <span><img src="styles/img/tanx.jpg" alt="tanx" title="淘宝tanx"/></span>
+              <span><img src="styles/img/doubleclick.jpg" alt="doubleclick" title="doubleclick"/></span>
+              <span><img src="styles/img/tencent.jpg" alt="tencent" title="腾讯"/></span>
+              <span><img src="styles/img/baidu.jpg" alt="baidu" title="百度"/></span>
+              <span><img src="styles/img/miaozhen.jpg" alt="miaozhen" title="秒针"/></span>
+              <span><img src="styles/img/sina.jpg" alt="sina" title="sina"/></span>
+              <span><img src="styles/img/haoye.jpg" alt="haoye" title="好耶"/></span>
+              <span><img src="styles/img/youku.jpg" alt="youku" title="优酷"/></span>
+              <div class="flowCount">
+                <div>
+                <h5>当日预计流量</h5>
+                <p id="traffic"></p>
+                </div>
+               </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 旋转木马的js -->
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript">
+    function countTraffic(){
+      var total = 5300000000, // 53亿
+        date = new Date(),
+        time = date.getHours()*60*60+date.getMinutes()*60+date.getSeconds(),
+        val = Math.round((total*time/86400+ total/86400*3)).toString(),
+        pos = val.length,
+        res = '';
+
+      while (pos > 3){
+          pos -= 3;
+          res = ',' + val.substr(pos, 3) + res;
+        }
+      if (pos){
+        res = val.substr(0, pos) + res;
+      }
+
+      $('#traffic').text(res);
+    }
+    setInterval(countTraffic, 3000);
+    countTraffic();
+    $('#myCarousel a[data-slide="next"]').click().parent().mouseout();
+  </script>
+</div>
+<!-- 尾部 -->
+{include footer}
+
