@@ -2,11 +2,11 @@
 resource(5) of type (mysql link)
 
 ### if..else
-> <?php if (condition): ?>
-> html code to run if condition is true
-> <?php else: ?>
-> html code to run if condition is false
-> <?php endif ?>
+    <?php if (condition): ?>
+    html code to run if condition is true
+    <?php else: ?>
+    html code to run if condition is false
+    <?php endif ?>
 
 ### header
 header('Location: http://www.example.com/');
@@ -24,11 +24,11 @@ $file = file_get_contents('./people.txt', FILE_USE_INCLUDE_PATH);
 后者是直接mysql_connect()
 
 ### html上传文件- type="file"
-<form action="upload_file.php" method="post" enctype="multipart/form-data">
-<label for="file">Filename:</label>
-<input type="file" name="file" id="file"><br>
-<input type="submit" name="submit" value="Submit">
-</form>
+    <form action="upload_file.php" method="post" enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file"><br>
+    <input type="submit" name="submit" value="Submit">
+    </form>
 
 ### explode(separator,string,limi)
 把字符串分割为数组;
@@ -68,7 +68,7 @@ no_connect 就不连接
 get :是在url上的
 post： 是表单且method为post
 GET是HTTP中最原始的请求方式，在网页中点击一个超级链接或在地址栏输入一个URL都会发送一个GET请求。在GET请求中，数据是后缀在URL后面来发送的，
-阅读：http://www.phpboke.com/get-post.html
+阅读：[http://www.phpboke.com/get-post.html]
 
 ### 下拉框<select><option></option></select>
 用.change事件
